@@ -46,7 +46,7 @@ func otherFunction() {
 
 func main() {
 	fmt.Println("runing the error chain example")
-	otherFunctiogit n()
+	otherFunction()
 }
 ```
 
