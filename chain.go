@@ -1,4 +1,4 @@
-package chain
+package echain
 
 import (
 	"errors"
@@ -15,6 +15,10 @@ type ErrorChain struct {
 	tail *link
 }
 
+// New create a new error chain
+func New() *ErrorChain {
+	return &ErrorChain{}
+}
 func (e *ErrorChain) Error() string {
 	return e.head.err.Error()
 }
