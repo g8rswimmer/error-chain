@@ -1,10 +1,3 @@
-# error-chain
-
-With `golang 1.13` the introduction of error wrapping was introduced.  
-
-There may be a need to gather an array of errors.  With this package you can do just that and leverage the new `1.13` functionality.
-
-```go
 package main
 
 import (
@@ -46,13 +39,5 @@ func otherFunction() {
 
 func main() {
 	fmt.Println("runing the error chain example")
-	otherFunctiogit n()
+	otherFunction()
 }
-```
-
-Output:
-```
-▶ go run *.go
-runing the error chain example
-got an error
-```
