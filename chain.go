@@ -2,6 +2,7 @@ package echain
 
 import (
 	"errors"
+	"strings"
 )
 
 type link struct {
@@ -20,7 +21,13 @@ func New() *ErrorChain {
 	return &ErrorChain{}
 }
 func (e *ErrorChain) Error() string {
-	return e.head.err.Error()
+	errs := []string{}
+	h := e.head
+	for h != nil {
+		errs = append(errs, h.err.Error())
+		h = h.next
+	}
+	return strings.Join(errs, ": ")
 }
 
 // Unwrap will give the next error
