@@ -125,7 +125,7 @@ func TestErrorChain_Error(t *testing.T) {
 					},
 				},
 			},
-			want: "1",
+			want: "1: 2: 3",
 		},
 	}
 	for _, tt := range tests {
